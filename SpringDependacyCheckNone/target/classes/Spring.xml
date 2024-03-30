@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+					 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+					 
+
+	<bean id="e" class="com.java.Employee" dependency-check="all"> <!--  -->
+	   	<property name="firstName" value="ram"></property>   
+ 		<property name="address" ref="a"></property>   
+	</bean>
+	
+	<bean id="a" class="com.java.Address" dependency-check="none" ><!-- address class maped hear using  id a -->
+	<!-- <property name="addressLine" value="M G Road"></property> -->
+</bean>
+</beans>

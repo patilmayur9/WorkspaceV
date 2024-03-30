@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ 						http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 						
+ 						
+	<bean id="categories" class="com.java.Categories" autowire="autodetect">
+		<property name="name" value="Life Insurance" />
+	</bean>
+	<bean id="policy" class="com.java.Policy">
+		<property name="planName" value="Term Plan" />
+		<property name="planAmount" value="1000" />
+	</bean>
+	
+	<!--  <bean id="policy1" class="com.java.Policy">  constructor approach
+		<property name="planName" value="Term Plan" />
+		<property name="planAmount" value="8500" />
+	</bean>
+	<bean id="categories1" class="com.java.Categories" autowire="constructor">
+		<property name="name" value="Life Insurance" />
+	</bean>  -->
+</beans>
